@@ -1,0 +1,184 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body class="bg-linear-to-b from-pink-50 via-purple-50 to-red-50">
+    <Header/>
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <slot />
+    </div>
+    <Footer/>
+	</body>
+</html>
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap');
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      #ec4899 0%,
+      #f43f5e 50%,
+      #e11d48 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .flower {
+  display: block;
+  animation: float 4s ease-in-out infinite;
+  text-align: center;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(15px) rotate(8deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+  .flower:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .flower:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.flower:nth-child(3) {
+  animation-delay: 1.6s;
+}
+.flower:nth-child(4) {
+  animation-delay: 2.4s;
+}
+.flower:nth-child(5) {
+  animation-delay: 3.2s;
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fade-in {
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .heart-pulse {
+    animation: heartPulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes heartPulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  .carousel-container {
+    scroll-behavior: smooth;
+  }
+
+  .quote-card {
+    transition: all 0.5s ease;
+  }
+
+  .quote-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(236, 72, 153, 0.2);
+  }
+</style>
+<script>
+  const observerOptions = {
+	threshold: 0.1,
+	rootMargin: '0px 0px -50px 0px',
+}
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeInUp 0.8s ease-in-out forwards'
+        observer.unobserve(entry.target)
+      }
+    })
+  }, observerOptions)
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const fadeElements = document.querySelectorAll('.fade-in')
+    fadeElements.forEach((el) => {
+      el.style.opacity = '0'
+      observer.observe(el)
+    })
+  })
+
+  window.addEventListener('scroll', () => {
+	const reveals = document.querySelectorAll('.fade-in') // Selecciona los elementos con la clase 'fade-in'
+
+	reveals.forEach((element) => {
+		const windowHeight = window.innerHeight
+		const elementTop = element.getBoundingClientRect().top
+		const elementVisible = 150
+
+		if (elementTop < windowHeight - elementVisible) {
+			element.style.opacity = '1'
+		}
+	})
+})
+
+window.addEventListener('scroll', () => {
+	const reveals = document.querySelectorAll('.fade-in')
+
+	reveals.forEach((element) => {
+		const windowHeight = window.innerHeight
+		const elementTop = element.getBoundingClientRect().top
+		const elementVisible = 150
+
+		if (elementTop < windowHeight - elementVisible) {
+			element.style.opacity = '1'
+		}
+	})
+})
+</script>

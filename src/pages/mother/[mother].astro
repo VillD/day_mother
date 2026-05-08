@@ -1,0 +1,47 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import madres from "../../mock/madres.json";
+import Main from "../../components/Main.astro";
+import Phrases from "../../components/Phrases.astro";
+import Cards from "../../components/Cards.astro";
+import Hero from "../../components/Hero.astro";
+import MessageMother from "../../components/MessageMother.astro";
+
+const { mother } = Astro.params;
+
+// Encontrar la madre seleccionada
+const madreData = madres.find(m => m.slug === mother);
+
+if (!madreData) {
+  return Astro.redirect('/mother');
+}
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return madres.map(madre => ({
+    params: { mother: madre.slug },
+    props: { madre }
+  }));
+};
+
+interface Props {
+  madre: {
+    slug: string;
+    nombre: string;
+    titulo: string;
+    descripcion: string;
+    emoji: string;
+    frases: string[];
+  };
+}
+
+const { madre } = Astro.props;
+---
+
+<Layout title={madre.nombre}>
+    <Hero motherName={madreData.nombre}/>
+    <Main description={madreData.descripcion}/>
+    <Phrases frases={madreData.frases}/>
+    <Cards/>
+    <MessageMother/>
+</Layout>

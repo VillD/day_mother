@@ -1,0 +1,104 @@
+---
+const { description } = Astro.props
+---
+<section class="mb-20 fade-in">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Image Placeholder -->
+    <div class="relative">
+      <div
+        class="absolute -inset-2 bg-linear-to-r from-pink-400 via-purple-400 to-rose-400 rounded-lg blur-lg opacity-75"
+      ></div>
+      <div
+        class="relative bg-white rounded-lg overflow-hidden shadow-2xl"
+      >
+        <div
+          class="aspect-square bg-linear-to-br from-pink-200 to-purple-200 flex items-center justify-center"
+        >
+          <div class="text-center">
+            <div class="text-9xl mb-4">👩‍🏫</div>
+            <p class="text-gray-600 font-semibold">
+              Espacio para la imagen
+            </p>
+            <p class="text-sm text-gray-500">Reemplaza con tu foto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tribute Text -->
+    <div class="space-y-6">
+      <h3 class="text-4xl font-bold text-rose-600 mb-6">
+      A ti, madre profesora
+    </h3>
+    <p class="text-lg text-gray-700 leading-relaxed">
+      {description}
+    </p>
+      <div class="pt-6">
+        <button
+          class="px-8 py-3 bg-linear-to-r from-pink-500 to-rose-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+        >
+          ¡A todas les deseamos felicidad!
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const button = document.querySelector('button')
+    if (button) {
+      button.addEventListener('click', () => {
+        // Crear confeti
+        createConfetti()
+
+        // Mostrar mensaje
+        button.textContent = '¡Gracias mamá! ❤️'
+        button.disabled = true
+
+        setTimeout(() => {
+          button.textContent = '¡A todas les deseamos felicidad!'
+          button.disabled = false
+        }, 2000)
+      })
+    }
+  function createConfetti() {
+    const colors = ['#ec4899', '#f43f5e', '#e11d48', '#fbbf24', '#60a5fa']
+
+    for (let i = 0; i < 30; i++) {
+      const confetti = document.createElement('div')
+      confetti.style.position = 'fixed'
+      confetti.style.left = Math.random() * 100 + '%'
+      confetti.style.top = '-10px'
+      confetti.style.width = '10px'
+      confetti.style.height = '10px'
+      confetti.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)]
+      confetti.style.borderRadius = '50%'
+      confetti.style.pointerEvents = 'none'
+      confetti.style.zIndex = '9999'
+
+      document.body.appendChild(confetti)
+
+      const duration = Math.random() * 2 + 2
+      const xMove = (Math.random() - 0.5) * 200
+
+      confetti.animate(
+        [
+          { transform: 'translateY(0) translateX(0)', opacity: 1 },
+          {
+            transform: `translateY(${window.innerHeight + 100}px) translateX(${xMove}px)`,
+            opacity: 0,
+          },
+        ],
+        {
+          duration: duration * 1000,
+          easing: 'ease-in',
+        }
+      )
+
+      setTimeout(() => {
+        confetti.remove()
+      }, duration * 1000)
+    }
+  }
+</script>

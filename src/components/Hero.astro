@@ -1,0 +1,35 @@
+---
+const { motherName } = Astro.props;
+---
+<header class="relative overflow-hidden pt-12 pb-20">
+  <div class="absolute inset-0 opacity-10">
+    <div
+      class="absolute top-0 left-0 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl"
+    ></div>
+    <div
+      class="absolute top-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl"
+    ></div>
+  </div>
+
+  <div class="relative z-10 text-center fade-in">
+  <div class="mb-8 inline-block bg-white bg-opacity-90 px-8 py-3 rounded-full shadow-lg border-2 border-pink-300">
+    <p class="text-xs md:text-sm font-bold text-pink-700 uppercase tracking-wider">Para: <span id="motherName" class="text-rose-600">{motherName}</span></p>
+  </div>
+  <h1 class="text-6xl md:text-7xl font-black mb-4 gradient-text">
+    FELIZ DÍA
+  </h1>
+  <h2 class="text-5xl md:text-6xl font-black text-rose-600 mb-6">
+    DE LA MADRE
+  </h2>
+  <p class="text-xl md:text-2xl text-gray-700 font-light">
+    Instituto Harvar 💝
+  </p>
+  <p class="text-sm text-gray-600 mt-4 font-semibold">Una profesora extraordinaria que inspira a nuestros estudiantes</p>
+
+  <!-- Decorative elements -->
+  <div class="mt-12 flex justify-center gap-8 text-5xl animate-pulse">
+    <span>💐</span>
+    <span class="heart-pulse">❤️</span>
+    <span>💐</span>
+  </div>
+</header>

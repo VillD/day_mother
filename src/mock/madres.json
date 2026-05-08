@@ -1,0 +1,174 @@
+[
+	{
+		"slug": "jenifer-aybar",
+		"nombre": "Prof. Jenifer Aybar",
+		"titulo": "Docente",
+		"descripcion": "Ejemplo de dedicación, paciencia y amor por la enseñanza.",
+		"emoji": "🌷",
+		"image": "/images/madres/jenifer-aybar.jpg",
+		"frases": [
+			{
+				"texto": "Ser madre y maestra es sembrar esperanza todos los días.",
+				"autor": "Anónimo"
+			},
+			{
+				"texto": "Educar con amor deja huellas eternas.",
+				"autor": "Paulo Freire"
+			},
+			{ "texto": "Tu enseñanza transforma vidas.", "autor": "Anónimo" },
+			{
+				"texto": "El conocimiento nace del corazón que enseña.",
+				"autor": "María Montessori"
+			},
+			{ "texto": "Gracias por inspirar con tu ejemplo.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "rosalia-bravo",
+		"nombre": "Prof. Rosalia Bravo",
+		"titulo": "Docente",
+		"descripcion": "Comprometida con formar estudiantes y personas de bien.",
+		"emoji": "🌸",
+		"image": "/images/madres/rosalia-bravo.jpg",
+		"frases": [
+			{ "texto": "Una madre enseña incluso en silencio.", "autor": "Anónimo" },
+			{
+				"texto": "La educación es el acto más grande de amor.",
+				"autor": "Nelson Mandela"
+			},
+			{ "texto": "Tu paciencia educa generaciones.", "autor": "Anónimo" },
+			{ "texto": "El amor guía cada aprendizaje.", "autor": "Anónimo" },
+			{ "texto": "Eres inspiración constante.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "veronica-castro",
+		"nombre": "Prof. Verónica Castro",
+		"titulo": "Docente",
+		"descripcion": "Inspirando sueños a través de la educación.",
+		"emoji": "💐",
+		"image": "/images/madres/veronica-castro.jpg",
+		"frases": [
+			{
+				"texto": "En cada clase dejas una lección de vida.",
+				"autor": "Anónimo"
+			},
+			{
+				"texto": "Educar es encender una luz.",
+				"autor": "William Butler Yeats"
+			},
+			{ "texto": "Tu vocación cambia destinos.", "autor": "Anónimo" },
+			{ "texto": "El amor enseña mejor que las palabras.", "autor": "Anónimo" },
+			{ "texto": "Gracias por creer siempre.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "consuelo-fernandez",
+		"nombre": "Prof. Consuelo Fernandez",
+		"titulo": "Docente",
+		"descripcion": "Modelo de compromiso educativo y humano.",
+		"emoji": "🌺",
+		"image": "/images/madres/consuelo-fernandez.jpg",
+		"frases": [
+			{
+				"texto": "Una madre educadora deja legado eterno.",
+				"autor": "Anónimo"
+			},
+			{ "texto": "La enseñanza nace del amor.", "autor": "Aristóteles" },
+			{ "texto": "Tu ejemplo guía caminos.", "autor": "Anónimo" },
+			{ "texto": "Educar también es amar.", "autor": "Anónimo" },
+			{ "texto": "Tu vocación inspira generaciones.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "patty-leon",
+		"nombre": "Prof. Patty Leon",
+		"titulo": "Docente",
+		"descripcion": "Transmitiendo valores y conocimiento con pasión.",
+		"emoji": "🌹",
+		"image": "/images/madres/patty-leon.jpg",
+		"frases": [
+			{ "texto": "Cada enseñanza tuya deja huella.", "autor": "Anónimo" },
+			{ "texto": "Educar es construir futuro.", "autor": "Anónimo" },
+			{ "texto": "La paciencia educa corazones.", "autor": "María Montessori" },
+			{ "texto": "Gracias por enseñar con amor.", "autor": "Anónimo" },
+			{ "texto": "Tu dedicación transforma vidas.", "autor": "Anónimo" }
+		]
+	},
+
+	{
+		"slug": "erika-lizana",
+		"nombre": "Prof. Erika Lizana",
+		"titulo": "Docente",
+		"descripcion": "Comprometida con el crecimiento académico y humano.",
+		"emoji": "🌼",
+		"image": "/images/madres/erika-lizana.jpg",
+		"frases": [
+			{ "texto": "Una madre enseña con el ejemplo.", "autor": "Anónimo" },
+			{ "texto": "Educar es sembrar futuro.", "autor": "Anónimo" },
+			{ "texto": "Tu enseñanza inspira sueños.", "autor": "Anónimo" },
+			{ "texto": "El amor es la mejor lección.", "autor": "Anónimo" },
+			{ "texto": "Gracias por formar corazones.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "mercedes-mendez",
+		"nombre": "Prof. Mercedes Mendez",
+		"titulo": "Docente",
+		"descripcion": "Ejemplo de entrega y vocación educativa.",
+		"emoji": "🌷",
+		"image": "/images/madres/mercedes-mendez.jpg",
+		"frases": [
+			{ "texto": "Tu enseñanza deja huellas eternas.", "autor": "Anónimo" },
+			{ "texto": "Educar es amar sin medida.", "autor": "Anónimo" },
+			{ "texto": "Gracias por inspirar valores.", "autor": "Anónimo" },
+			{ "texto": "El conocimiento nace del cariño.", "autor": "Anónimo" },
+			{ "texto": "Tu vocación ilumina caminos.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "gladys-mendez",
+		"nombre": "Prof. Gladys Mendez",
+		"titulo": "Docente",
+		"descripcion": "Transmitiendo sabiduría con dedicación y cariño.",
+		"emoji": "💮",
+		"image": "/images/madres/gladys-mendez.jpg",
+		"frases": [
+			{ "texto": "Ser madre y maestra es un privilegio.", "autor": "Anónimo" },
+			{ "texto": "Tu enseñanza vive en cada estudiante.", "autor": "Anónimo" },
+			{ "texto": "Educar transforma el mundo.", "autor": "Nelson Mandela" },
+			{ "texto": "Tu paciencia construye futuro.", "autor": "Anónimo" },
+			{ "texto": "Gracias por enseñar con el corazón.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "juanita-vasquez",
+		"nombre": "Prof. Juanita Vasquez",
+		"titulo": "Docente",
+		"descripcion": "Inspirando aprendizaje con pasión y dedicación.",
+		"emoji": "🌸",
+		"image": "/images/madres/juanita-vasquez.jpg",
+		"frases": [
+			{ "texto": "Cada clase tuya deja inspiración.", "autor": "Anónimo" },
+			{ "texto": "El amor educa mejor.", "autor": "Anónimo" },
+			{ "texto": "Tu vocación es ejemplo.", "autor": "Anónimo" },
+			{ "texto": "Educar es un acto de esperanza.", "autor": "Paulo Freire" },
+			{ "texto": "Gracias por guiar caminos.", "autor": "Anónimo" }
+		]
+	},
+	{
+		"slug": "yudith-yunguri",
+		"nombre": "Prof. Yudith Yunguri",
+		"titulo": "Docente",
+		"descripcion": "Comprometida con el aprendizaje y el crecimiento humano.",
+		"emoji": "🌺",
+		"image": "/images/madres/yudith-yunguri.jpg",
+		"frases": [
+			{ "texto": "Educar es tocar el futuro.", "autor": "Anónimo" },
+			{ "texto": "Tu enseñanza inspira vidas.", "autor": "Anónimo" },
+			{ "texto": "El amor guía cada aprendizaje.", "autor": "Anónimo" },
+			{ "texto": "Gracias por compartir tu vocación.", "autor": "Anónimo" },
+			{ "texto": "Una maestra cambia destinos.", "autor": "Anónimo" }
+		]
+	}
+]

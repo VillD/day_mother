@@ -1,0 +1,108 @@
+---
+const {frases} =Astro.props
+---
+<section class="mb-20 fade-in">
+  <div class="text-center mb-12">
+    <h3 class="text-4xl font-bold text-gray-800 mb-2">
+      Frases Inspiradoras
+    </h3>
+    <p class="text-gray-600">Dedicadas a todas las madres</p>
+  </div>
+
+  <!-- Carousel de frases -->
+  <div class="relative">
+    <div
+      class="quote-card bg-white rounded-2xl shadow-xl p-8 md:p-12 border-2 border-pink-200"
+    >
+      <div class="mb-6">
+        <p class="text-4xl text-pink-400 mb-4">"</p>
+        <p
+          class="text-xl md:text-2xl text-gray-800 font-light mb-4 italic"
+          id="quoteText"
+        >
+          El amor de una madre es la fuerza más grande del universo.
+        </p>
+        <p class="text-4xl text-pink-400 text-right">‟</p>
+      </div>
+      <p class="text-right text-gray-600 font-semibold" id="quoteAuthor">
+        - Barbara Kingsolver
+      </p>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="flex justify-center gap-4 mt-8">
+      <button
+        id="buttonPrev"
+        class="px-6 py-2 bg-pink-500 text-white rounded-full font-semibold hover:bg-pink-600 transition-colors"
+      >
+        ← Anterior
+      </button>
+      <button
+        id="buttonNext"
+        class="px-6 py-2 bg-pink-500 text-white rounded-full font-semibold hover:bg-pink-600 transition-colors"
+      >
+        Siguiente →
+      </button>
+    </div>
+
+    <!-- Quote indicators -->
+    <div class="flex justify-center gap-2 mt-6">
+      <span id="indicator">1 / 5</span>
+    </div>
+  </div>
+</section>
+
+
+<script define:vars={{frases}}>
+
+  let currentQuoteIndex = 0
+
+  buttonPrev.addEventListener('click', prevQuote)
+  buttonNext.addEventListener('click', nextQuote)
+  // Función para mostrar la siguiente frase
+  function nextQuote() {
+    currentQuoteIndex = (currentQuoteIndex + 1) % frases.length
+    updateQuote()
+  }
+
+  // Función para mostrar la frase anterior
+  function prevQuote() {
+    currentQuoteIndex = (currentQuoteIndex - 1 + frases.length) % frases.length
+    updateQuote()
+  }
+
+  // Función para actualizar la frase mostrada
+  function updateQuote() {
+    const quoteText = document.getElementById('quoteText')
+    const quoteAuthor = document.getElementById('quoteAuthor')
+    const indicator = document.getElementById('indicator')
+
+    // Agregar efecto de fade
+    quoteText.style.opacity = '0'
+    quoteAuthor.style.opacity = '0'
+
+    setTimeout(() => {
+      quoteText.textContent = frases[currentQuoteIndex].texto
+      quoteAuthor.textContent = `- ${frases[currentQuoteIndex].autor}`
+      indicator.textContent = `${currentQuoteIndex + 1} / ${frases.length}`
+
+      quoteText.style.opacity = '1'
+      quoteAuthor.style.opacity = '1'
+    }, 300)
+  }
+
+  // Agregar transiciones suaves
+  document.addEventListener('DOMContentLoaded', () => {
+    // Personalizar la página con el nombre de la madre
+    personalizarPagina()
+
+    const quoteText = document.getElementById('quoteText')
+    const quoteAuthor = document.getElementById('quoteAuthor')
+
+    quoteText.style.transition = 'opacity 0.3s ease-in-out'
+    quoteAuthor.style.transition = 'opacity 0.3s ease-in-out'
+
+    // Cambiar frase automáticamente cada 6 segundos
+    setInterval(nextQuote, 6000)
+  })
+</script>
